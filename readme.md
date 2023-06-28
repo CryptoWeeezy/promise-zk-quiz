@@ -2,7 +2,8 @@
 
 Safely blockchainify any puzzle game with zero-knowledge proofs.
 
-See [our game protected by Promise](https://youtu.be/).
+See [our game protected by Promise](https://youtu.be/). 
+Try [our simplified technical demo](https://joyful-fudge-605f98.netlify.app/).
 ## Original technology
 
 The protocol builds upon a solid zero-knowledge foundation, but adds an unexpected twist. 
