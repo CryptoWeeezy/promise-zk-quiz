@@ -4,6 +4,7 @@ Safely blockchainify any puzzle game with zero-knowledge proofs.
 
 See [our game protected by Promise](https://youtu.be/). 
 Try [our simplified technical demo](https://joyful-fudge-605f98.netlify.app/).
+
 ## Original technology
 
 The protocol builds upon a solid zero-knowledge foundation, but adds an unexpected twist. 
@@ -46,14 +47,21 @@ Unlike many client-side P2E games, Promise protected games are immune to all sor
 > After:
 > Promise auto-returns escrowed money, if the level was not delivered to the user. There is no other way around. 
 The money is returned in two minutes.
- 
+
+ **Privacy: Replayable games**
+> Before zero-knowledge:
+> To verify on-chain, the server had to open a commitment hash. The public announcment of the answer rendered game no longer playable. Other people could not play it. They already knew the answer, so it would be pointless. 
+>
+> After:
+> On one side, Promise is transparent. The protocol is done on a public blockchain. On the other side, due to our new zero-knowledge algorithm, there is no need to reveal any private info to verify the answer. Other people can still play it. Be it ten or ten thousand times. Rules are known in advance. With Promise games are ultimately replayable and transparent!
+
 **Privacy: Payout is instant**
 > Before on-chain zero-knowledge:
 > There are no guarantees. The server is not obliged to pay at all. Remember those games with weekly payouts?
-> 
+> Even worse.  Verificatoion happens "behind the closed doors". So, there are zero guarantees for the parties. Both might break the rules. As there are no fixed rules at all.
 > After:
 > The smart contract on-chain safeguards the process. Amount and time are fixed in advance. 
-> This transparency gives rock solid guarantees. Rewards are instant.
+> This transparency gives rock solid guarantees. Rules are fixed. Rewards are instant.
 
 <!-- **Privacy: Nobody steals from the company**
 > Before on-chain zero-knowledge:
@@ -65,14 +73,6 @@ Private gaming -->
 > 
 > After:
 > Imagine that one could could always take words back. And right the wrongs. Without anyone ever noticing. This is the case with Promise. There are no wrong tries. Your answer is encrypted in a very particular way. Even the game company does not know what you answered. They only know 1-bit. Either you matched the right answer or not. Nothing more. This sense liberates you and encourages creative ideas.
-
-**Privacy: Replayable games**
-> Before on-chain zero-knowledge:
-> To verify in public, server had to open a commitment hash. The public announcment of the answer rendered game no longer playable. Other people could not play it. They already knew the answer
-> so it would be pointless. Verification over a secret channel makes a game replayable. Though at a high cost. It happens "behind closed doors". So, there are zero guarantees for the parties. Both might break the rules. As there are no rules at all. No public agreement on rules. Cheating proliferates.
->
-> After:
-> Promise fixed both problems. It is transparent. The protocol is done on a public blockchain. Due to zero-knowledge algorithm, there is no need to reveal anything to verify answer. Other people can still play it. Rules are known in advance. With Promise games are ultimately replayable and transparent!
 
 # Concluding remarks
 Warning! Starting from the next section are very technical details. One might even want to say nerdy. It is ok if you are not into algorithms. If you feel uncomfortable there is nothing wrong in skipping this part. It is going to explore the rationale and the code behind.
