@@ -59,6 +59,7 @@ The money is returned in two minutes.
 > Before on-chain zero-knowledge:
 > There are no guarantees. The server is not obliged to pay at all. Remember those games with weekly payouts?
 > Even worse.  Verificatoion happens "behind the closed doors". So, there are zero guarantees for the parties. Both might break the rules. As there are no fixed rules at all.
+>
 > After:
 > The smart contract on-chain safeguards the process. Amount and time are fixed in advance. 
 > This transparency gives rock solid guarantees. Rules are fixed. Rewards are instant.
