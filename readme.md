@@ -49,6 +49,7 @@ The money is returned in two minutes.
 **Privacy: Payout is instant**
 > Before on-chain zero-knowledge:
 > There are no guarantees. The server is not obliged to pay at all. Remember those games with weekly payouts?
+> 
 > After:
 > The smart contract on-chain safeguards the process. Amount and time are fixed in advance. 
 > This transparency gives rock solid guarantees. Rewards are instant.
@@ -59,7 +60,8 @@ Private gaming -->
 
 **Privacy: Encourage creativity**
 > Before on-chain zero-knowledge:
-> Imagine an exam or a creativity game. How does . This automatically diminishes creativity. Only in a safe space new ideas emerge.  
+> Imagine an exam or a creativity game. How does . This automatically diminishes creativity. Only in a safe space new ideas emerge.
+> 
 > After:
 > Imagine that one could could always take words back. And right the wrongs. Without anyone ever noticing. This is the case with Promise. There are no wrong tries. Your answer is encrypted in a very particular way. Even the game company does not know what you answered. They only know 1-bit. Either you matched the right answer or not. Nothing more. This sense liberates you and encourages creative ideas.
 
