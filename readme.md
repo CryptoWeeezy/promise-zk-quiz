@@ -76,7 +76,7 @@ Private gaming -->
 > Imagine an exam or a creativity game. How does being wrong in public feel? This automatically diminishes creativity. Only in a safe space new ideas emerge.
 > 
 > After:
-> Imagine that one could could always take words back. And right the wrongs. Without anyone ever noticing. This is the case with Promise. There are no wrong tries. Your answer is encrypted in a very particular way. Even the game company does not know what you answered. They only know 1-bit. Either you matched the right answer or not. Nothing more. This sense liberates you and encourages creative ideas.
+> Imagine that one could always take words back. And right the wrongs. Without anyone ever noticing. This is the case with Promise. There are no wrong tries. Your answer is encrypted in a very particular way. Even the game company does not know what you answered. They only know 1-bit. Either you matched the right answer or not. Nothing more. This sense liberates you and encourages creative ideas.
 
 # Concluding remarks
 Warning! Starting from the next section are very technical details. One might even want to say nerdy. It is ok if you are not into algorithms. If you feel uncomfortable there is nothing wrong in skipping this part. It is going to explore the rationale and the code behind.
