@@ -65,7 +65,7 @@ The money is returned in two minutes.
 >
 > After:
 > The smart contract on-chain safeguards the process. Amount and time are fixed in advance. 
-> This transparency gives rock solid guarantees. Rules are fixed. Rewards are instant.
+> This transparency gives rock solid guarantees. All rules are fixed. Rewards are instant.
 
 <!-- **Privacy: Nobody steals from the company**
 > Before on-chain zero-knowledge:
