@@ -78,14 +78,14 @@ Private gaming -->
 > After:
 > Imagine that one could always take words back. And right the wrongs. Without anyone ever noticing. This is the case with Promise. There are no wrong tries. Your answer is encrypted in a very particular way. Even the game company does not know what you answered. They only know 1-bit. Either you matched the right answer or not. Nothing more. This sense liberates you and encourages creative ideas.
 
-# Concluding remarks
+## Concluding remarks
 Warning! Starting from the next section are very technical details. One might even want to say nerdy. It is ok if you are not into algorithms. If you feel uncomfortable there is nothing wrong in skipping this part. It is going to explore the rationale and the code behind.
 
 Thanks for be willing to know about the benefits of on-chain zero-knowldge gaming with Promise. And thanks for reading the text. Here is a small conclusion then:
 
 I hope that this work sparks more conversation about verifiable games. And their common bulding blocks. Promise is such a foundational bulding block. It acts as an on-chain middle man. It matches user and game server answers with our new zero-knowledge technology. It uses a collateral scheme to deincentivize any fraud. As a result: there is no more cheating, there are always guaranteed rewards, the rewards are instant, at the same time the games are private for both sides. We hope that you benefit by using it in your projects. Together we redefine the gaming. And we Promise. The future of games is here!
 
-# The algorithm shortly
+## The algorithm shortly
 
 So, the latter are the details for the 🦄 nerds like us:
 
@@ -97,13 +97,13 @@ that they did a Diffie-Hellman key exchange, and they arrived at the same point,
 Those two circuits: the first one for initial commitment to the key, and the second for proven multiplication are
 in: [commit.circom](commit.circom) and [unlock.circom](unlock.circom)
 
-# When it works 
+## When it works 
 
 The security proof relies on DDH - Decisional Diffie-Hellman assumption. It holds for elliptic curves with high embedding degree where pairings are not efficiently computable. 
 
 When the adversary sees more tries. Breaking the system this way tranforms into finding multi-linear pairings. And there are [some additional reasons](https://crypto.stanford.edu/~dabo/papers/mlinear.pdf) why it seems difficult.  
 
-# Why non-trivial
+## Why non-trivial
 
 The difficulty was that it involes two parties, say, student and professor. So it is a multi-party computation protocol. The professor holds a secret - the true answer. The hardest thing, this answer belongs to a very small set. Might be just three options for a multiple choice test.
 
@@ -112,7 +112,7 @@ It works, but anyway means that the salt is a secret stored by another party)
 
 Even a more general statement. If there is enough information to verify the answer in the smart-contract. And we want verification to be quick. And this chain does not support secret sharing. Then such smart-contract might be dry-run. The perpetrator could just simulate calling the contract and instantly guess which option from three was correct. That's why we anyway need at least second party to hold the secret safely.
 
-# Why zkNARK
+## Why zkNARK
 
 The use-case of NARK here is to prove that each party follows the multi-party computataion protocol as it's written. The groth16 verifier is implemented in [the smart contract, please see it.](sui-verifier/sources/dev_verifier.move) The contract acts as middleman. It de-incentivizes both sides for not providing the proof in time. And makes cheating meaningless and costly.
 
@@ -120,7 +120,7 @@ The cost of a try can be [tweaked here](sui-verifier/sources/dev_verifier.move#L
 [Use deploy.js](client-scripts/deploy.js) if you want to ship your own version.
 The contract can handle as many different questions at the same time as one neeeds.
 
-# A bit more details on the algorithm
+## A bit more details on the algorithm
 
 The idea is to encode the answers by hashing to a point on the elliptic curve, and prove that both parties obeyed Diffie-Hellman exchange. 
 If they could arrive at the same point it means that they started from the same point, if they could not then answers were different.
@@ -129,6 +129,6 @@ To ellaborate, P is a to-curve hash of my answer. And k is my random key. And a 
 
 Then if they are equal we had same answers. Seems like no information leaked under Decisional Diffie-Hellman assumption. Or some sort of a multi-linear generalization, if many past tries are available in public.
 
-# Conclusion
+## Conclusion
 
 I hope that this work sparks more converstation about verifiable games. And their general - often occuring - bulding blocks. Promise is such a foundational bulding block. It acts as an on-chain middle man. It matches user and game server answers with our new zero-knowledge technology. It uses a collateral scheme to deincentivize any fraud. As a result: there is no more cheating, there are always guaranteed rewards, the rewards are instant, at the same time the games are private for both sides. We hope that you benefit by using it in your projects. Together we redefine the gaming. And we Promise. The future of games is here!
