@@ -28,7 +28,7 @@ It can be placing mirrors to guide the laser through the labirynth. It can be fi
 ## A must
 Why should we blockchainify games at all? What does it even mean?
 
-Something never possible before blockchain and before zero-knowledge proofs happens. If a game level has just one correct solution.
+Something never possible before blockchain and before zero-knowledge proofs happens. Let's say a game level has just one correct solution.
 Promise is an algorithm to verify the correctness of the level solution. Promise uses zero-knowledge proofs. It safeguards the interaction between game server and player by being an on-chain middleman. 
 
 Let's see what Promise brings in.
