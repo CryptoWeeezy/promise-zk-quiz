@@ -23,12 +23,15 @@ Read more to understand.
 There are games to tell stories. There are games to solve mysteries. If there is only one way to solve a level - only one answer - then Promise works.
 
 Any such game old or new can, actually, be run on-chain. 
-It can be placing mirrors to guide the laser through the labirynth. It can be finding one concept which unites four pictures. It can be guessing which brand is on the logo. We present a general solution to rule them all.
+It can be placing mirrors to guide the laser through the labirynth. It can be finding one concept which unites four pictures. It can be guessing which brand is on the logo. We present a general solution to rule them all. 
 
 ## A must
 Why should we blockchainify games at all? What does it even mean?
 
-Something never possible before blockchain and before zero-knowledge proofs happens. Let's see what Promise brings in.
+Something never possible before blockchain and before zero-knowledge proofs happens. If a game level has just one correct solution.
+Promise is an algorithm to verify the correctness of the level solution. Promise uses zero-knowledge proofs. It safeguards the interaction between game server and player by being an on-chain middleman. 
+
+Let's see what Promise brings in.
 
 **Auto payout on win**
 > Before chains:
