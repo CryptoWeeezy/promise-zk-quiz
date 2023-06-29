@@ -192,15 +192,15 @@ async function process_answer(quest_id, student_address, student_aH_x, student_a
 }
 
 async function table_field_to_answer(quest_id, table_field) {
-    const { data: { content: { fields: value } } } = await provider.getObject({
+    const { data: { content: { fields: value } = {} } = {} } = await provider.getObject({
         id: table_field,
         // fetch the object content field
         options: { showContent: true },
     });
-    console.log(value.value.fields)
+    //console.log(value.value.fields)
 
-    const { student_address, student_aH_x, student_aH_y } = value.value.fields;
-    await process_answer(quest_id, student_address, student_aH_x, student_aH_y);
+    const { student_address = '', student_aH_x = '', student_aH_y = '' } = value?.value?.fields ?? {};
+    if (student_address != '') await process_answer(quest_id, student_address, student_aH_x, student_aH_y);
 }
 
 async function run() {
@@ -232,7 +232,7 @@ async function run() {
                 console.log(table_id, table_fields);
 
                 //Now in parallel launch process all the answers found not just [0]
-                table_fields.data.map(async (obj) => await table_field_to_answer(quest_id, obj.objectId));
+                table_fields.data.map(async (obj) => await table_field_to_answer(quest_id, obj.objectId).catch((e)=>{console.log(e)}));
                 await new Promise(r => setTimeout(r, 10000));
                 console.log("Looped another time")
             }

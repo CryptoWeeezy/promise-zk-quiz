@@ -83,14 +83,20 @@ console.log({ verifier_pkg, quest_id });
 
 //Define the styled components for the demo website
 const Container = styled.div`
+  padding: 30px;
+  border-radius: 40px;
+  background-color: #b67bdb;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 90vh;
+  min-height: 1000px;
   max-width: 500px;
+  width: 500px;
+  max-height: 1000px;
 `;
 
 const ImageLogo = styled.img`
+  margin-left: 20px;
   width: 262px;
   align-self: flex-start;
   justify-self: flex-start;
@@ -102,25 +108,31 @@ const Image = styled.img`
   justify-self: center;
 `;
 
-const ImageStop = styled.img`
-  width: 200px;
-  height: 200px;
-  margin-bottom: 20px;
+const ButtonImg = styled.img`
+  width: 90%;
   align-self: center;
-  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+  justify-self: center;
+`;
+
+const QuestionImg = styled.img`
+  margin-bottom: 20px;
+  width: ${(props) => props.width};
+  margin-top: ${(props) => props.marginTop};
+  align-self: center;
+  justify-self: center;
 `;
 
 const Question = styled.h2`
-  font-family: "Georgia", serif;
+  font-family: "Krub", sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
-  margin-top: 20px;
-  color: #000;
+  margin-top: -15px;
+  color: #ffffff;
   text-align: center;
 `;
 
 const Hint = styled.p`
-  font-family: "Georgia", serif;
+  font-family: "Krub", sans-serif;
   font-size: 19px;
   margin-bottom: 20px;
   color: #000;
@@ -128,18 +140,28 @@ const Hint = styled.p`
 `;
 
 const Input = styled.input`
-  width: 100%;
+  //margin-top: 10px;
+  font-family: "Krub", sans-serif;
+  width: 70%;
   height: 40px;
   padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
+  //margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.0); 
+  border: 2px solid white; 
+  font-size: 26px;
+  color: #ffffff;
   text-align: center;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  ::placeholder {
+    color: #BABABA;
+  }
+  &:focus {
+    outline: 5px solid #DBFF00;
+  }
 `;
 
 const Button = styled.button`
+  font-family: "Krub", sans-serif;
   background-color: #00c853;
   color: #fff;
   font-size: 16px;
@@ -148,24 +170,34 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  //box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: #007e3a;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
+    background-color: #C9FF55;
+    //box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
     transform: translateY(-2px);
   }
 
+  &:focus {
+    outline: 5px solid #A23EE0;
+  }
+
   &:active {
-    background-color: #005d1e;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: #8EF66A;
+    //box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
     transform: translateY(2px);
   }
 `;
 
 const MintButton = styled(Button)`
-  background-color: #ff6d00;
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: 900;
+  border-radius: 15px;
+  font-family: "Krub", sans-serif;
+  background-color: #dbff00;
   margin-top: 20px;
 `;
 
@@ -175,6 +207,7 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-self: center;
   max-width: 500px;
   width: 90%;
 `;
@@ -217,7 +250,19 @@ function ConnectToWallet() {
       connectedText={
         currentAccount && `Connected: ${formatAddress(currentAccount.address)}`
       }
-      style={{ justifySelf: "flex-end" }}
+      style={{
+        justifySelf: "flex-end",
+        marginRight: 20,
+        marginTop: 6,
+        backgroundColor: "#DBFF00",
+        color: "#B67BDB",
+        width: 120,
+        height: 40,
+        fontWeight: "bold",
+        padding: "0em 0em",
+        fontSize: 15,
+        alignSelf: "center"
+      }}
     />
   );
 }
@@ -490,31 +535,54 @@ const Main = () => {
     <>
       <Container>
         <Flex>
-          <ImageLogo src="/logo_full.png" alt="Logo with text saying PROMISE" />{" "}
+          <ImageLogo src="/OGOGO.png" alt="Logo with text saying PROMISE" />
           <ConnectToWallet></ConnectToWallet>
         </Flex>
         {
           spinning ? (
             <Form onSubmit={handleSubmit}>
               <InputColumn>
-                <Question>Who co-invented zero-knowledge proofs?</Question>
-                <Hint>
-                  Changpeng Zhao, Silvio Micali, Vitalik Buterin, or Satoshi
-                  Nakamoto
-                </Hint>
+                <QuestionImg
+                 width="100%"
+                  src="/Who.svg"
+                  alt="Question text: Who co-invented zero-knowledge-proofs?"
+                />
+                <QuestionImg
+                  marginTop="25px"
+                  width="100%"
+                  src="/Variants8.svg"
+                  alt="Answer variants: Vitalik Buterin, Changpeng Zhao, Silvio Micali, Satoshi Nakamoto"
+                />
+                <QuestionImg
+                  marginTop="100px"
+                  width="80%"
+                  src="/askType.svg"
+                  alt="Logo with text saying PROMISE"
+                />
                 <Input
                   type="text"
-                  placeholder="Type your answer here"
+                  placeholder="???"
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}
                 />
-                <MintButton type="submit">zkAnswer</MintButton>
+                <MintButton type="submit">
+                  <ButtonImg
+                    src="/zkAnswer.svg"
+                    alt="Logo with text saying PROMISE"
+                  />
+                </MintButton>
               </InputColumn>
             </Form>
           ) : (
             <ImageColumn>
+              <QuestionImg
+                  marginTop="0px"
+                  width="80%"
+                  src="/Congrats.svg"
+                  alt="Logo with text saying PROMISE"
+                />
               <Question>
-                Congratulations you answered right! The zkPrize you got in the
+                You answered right! The zkPrize you got in the
                 wallet is special. It represents a valid zkProof of a matching
                 answer.{" "}
               </Question>
