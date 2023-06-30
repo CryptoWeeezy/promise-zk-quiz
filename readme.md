@@ -5,7 +5,7 @@ Safely blockchainify any puzzle game with zero-knowledge proofs.
 See [our game protected by Promise](https://youtu.be/qMRW6Rq8xzQ). 
 
 Try [our simplified technical demo](https://joyful-fudge-605f98.netlify.app/).
-Please notice that only testnet will work.
+Please use testnet only. 
 
 ## Original technology
 
